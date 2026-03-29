@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* ───── Modern SaaS Design Tokens ───── */
+:root {
+  /* Brand - Indigo & Emerald Palette */
+  --primary: #6366F1;
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #F1F2FF;
+  --secondary-foreground: #4338CA;
+  
+  --accent: #10B981;
+  --accent-foreground: #FFFFFF;
+
+  /* Neutrals - Slate stack */
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+  
+  --popover: #FFFFFF;
+  --popover-foreground: #0F172A;
+  
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #6366F1;
+
+  /* Status */
+  --success: #10B981;
+  --warning: #F59E0B;
+  --destructive: #EF4444;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  /* Spacing (8px system) */
+  --space-unit: 8px;
+  --radius: 0.5rem; /* 8px */
+  --radius-lg: 0.75rem; /* 12px */
+  --radius-xl: 1rem; /* 16px */
+
+  /* Shadows - Refined, not heavy */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* ───── Global Reset & Base ───── */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Clear focus styles */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* ───── Animations ───── */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fade-in 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ───── Layout Helpers ───── */
+.dashboard-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .dashboard-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1280px) {
+  .dashboard-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* ───── Reusable Utility Classes ───── */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-shadow {
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card-shadow:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}

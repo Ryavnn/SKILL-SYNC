@@ -1,0 +1,62 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.3, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: c:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend
+collecting ... collected 6 items
+
+tests/test_admin_module.py::TestAdminModule::test_update_user_role PASSED [ 16%]
+tests/test_admin_module.py::TestAdminModule::test_deactivate_user_safety_guard PASSED [ 33%]
+tests/test_admin_module.py::TestAdminModule::test_verify_freelancer PASSED [ 50%]
+tests/test_admin_module.py::TestAdminModule::test_flag_project PASSED    [ 66%]
+tests/test_admin_module.py::TestAdminModule::test_skill_taxonomy_management PASSED [ 83%]
+tests/test_admin_module.py::TestAdminModule::test_analytics_overview PASSED [100%]
+
+============================== warnings summary ===============================
+tests/test_admin_module.py: 19 warnings
+  C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\sqlalchemy\sql\schema.py:3624: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    return util.wrap_callable(lambda ctx: fn(), fn)  # type: ignore
+
+tests/test_admin_module.py::TestAdminModule::test_update_user_role
+tests/test_admin_module.py::TestAdminModule::test_deactivate_user_safety_guard
+  c:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\repositories\admin_repository.py:18: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    return User.query.get(user_id)
+
+tests/test_admin_module.py::TestAdminModule::test_update_user_role
+  c:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\tests\test_admin_module.py:85: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    updated_user = User.query.get(test_client_user.id)
+
+tests/test_admin_module.py::TestAdminModule::test_deactivate_user_safety_guard
+  c:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\tests\test_admin_module.py:102: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    active_admin = User.query.get(admin_user.id)
+
+tests/test_admin_module.py::TestAdminModule::test_verify_freelancer
+  c:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\repositories\admin_repository.py:25: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    return FreelancerProfile.query.get(freelancer_id)
+
+tests/test_admin_module.py::TestAdminModule::test_verify_freelancer
+  c:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\tests\test_admin_module.py:112: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    updated_profile = FreelancerProfile.query.get(test_freelancer_profile.id)
+
+tests/test_admin_module.py::TestAdminModule::test_flag_project
+  c:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\repositories\admin_repository.py:31: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    return Project.query.get(project_id)
+
+tests/test_admin_module.py::TestAdminModule::test_flag_project
+  c:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\tests\test_admin_module.py:135: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    updated_project = Project.query.get(project_id)
+
+tests/test_admin_module.py::TestAdminModule::test_skill_taxonomy_management
+tests/test_admin_module.py::TestAdminModule::test_skill_taxonomy_management
+  c:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\repositories\admin_repository.py:52: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    return Skill.query.get(skill_id)
+
+tests/test_admin_module.py::TestAdminModule::test_skill_taxonomy_management
+  c:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\tests\test_admin_module.py:150: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    assert Skill.query.get(skill_id).name == "Python Expert"
+
+tests/test_admin_module.py::TestAdminModule::test_skill_taxonomy_management
+  c:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\tests\test_admin_module.py:155: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    assert Skill.query.get(skill_id) is None
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 6 passed, 31 warnings in 12.26s =======================

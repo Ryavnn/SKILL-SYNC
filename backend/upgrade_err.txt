@@ -1,0 +1,172 @@
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade 2abe46b3dd3c -> c3871b411971, Add notifications and analytics
+Traceback (most recent call last):
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.DatatypeMismatch: foreign key constraint "notifications_user_id_fkey" cannot be implemented
+DETAIL:  Key columns "user_id" and "id" are of incompatible types: character varying and uuid.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\flask\__main__.py", line 3, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\flask\cli.py", line 1131, in main
+    cli.main()
+    ~~~~~~~~^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\click\core.py", line 1406, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\click\core.py", line 1873, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\click\core.py", line 1873, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\click\core.py", line 1269, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\click\core.py", line 824, in invoke
+    return callback(*args, **kwargs)
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\click\decorators.py", line 34, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\flask\cli.py", line 400, in decorator
+    return ctx.invoke(f, *args, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\click\core.py", line 824, in invoke
+    return callback(*args, **kwargs)
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\flask_migrate\cli.py", line 157, in upgrade
+    _upgrade(directory or g.directory, revision, sql, tag, x_arg or g.x_arg)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\flask_migrate\__init__.py", line 111, in wrapped
+    f(*args, **kwargs)
+    ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\flask_migrate\__init__.py", line 200, in upgrade
+    command.upgrade(config, revision, sql=sql, tag=tag)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\alembic\command.py", line 483, in upgrade
+    script.run_env()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\alembic\script\base.py", line 545, in run_env
+    util.load_python_file(self.dir, "env.py")
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\alembic\util\pyfiles.py", line 116, in load_python_file
+    module = load_module_py(module_id, path)
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\alembic\util\pyfiles.py", line 136, in load_module_py
+    spec.loader.exec_module(module)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\migrations\env.py", line 113, in <module>
+    run_migrations_online()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\migrations\env.py", line 107, in run_migrations_online
+    context.run_migrations()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 8, in run_migrations
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\alembic\runtime\environment.py", line 969, in run_migrations
+    self.get_context().run_migrations(**kw)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\alembic\runtime\migration.py", line 626, in run_migrations
+    step.migration_fn(**kw)
+    ~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\migrations\versions\c3871b411971_add_notifications_and_analytics.py", line 32, in upgrade
+    op.create_table('notifications',
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+    sa.Column('id', sa.String(length=36), nullable=False),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    sa.PrimaryKeyConstraint('id')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "<string>", line 8, in create_table
+  File "<string>", line 3, in create_table
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\alembic\operations\ops.py", line 1331, in create_table
+    return operations.invoke(op)
+           ~~~~~~~~~~~~~~~~~^^^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\alembic\operations\base.py", line 452, in invoke
+    return fn(self, operation)
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\alembic\operations\toimpl.py", line 140, in create_table
+    operations.impl.create_table(table, **kw)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\alembic\ddl\impl.py", line 442, in create_table
+    self._exec(schema.CreateTable(table, **kw))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\alembic\ddl\impl.py", line 256, in _exec
+    return conn.execute(construct, params)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\sqlalchemy\sql\ddl.py", line 187, in _execute_on_connection
+    return connection._execute_ddl(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1530, in _execute_ddl
+    ret = self._execute_context(
+        dialect,
+    ...<4 lines>...
+        compiled,
+    )
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ryani\Desktop\AI_DEV_WORKSPACE\Projects\SKILL-SYNC\backend\env\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.DatatypeMismatch) foreign key constraint "notifications_user_id_fkey" cannot be implemented
+DETAIL:  Key columns "user_id" and "id" are of incompatible types: character varying and uuid.
+
+[SQL: 
+CREATE TABLE notifications (
+	id VARCHAR(36) NOT NULL, 
+	user_id VARCHAR(36) NOT NULL, 
+	type VARCHAR(50) NOT NULL, 
+	message TEXT NOT NULL, 
+	is_read BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(user_id) REFERENCES users (id)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/f405)
