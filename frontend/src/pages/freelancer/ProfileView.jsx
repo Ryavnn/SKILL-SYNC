@@ -55,13 +55,12 @@ export default function ProfileView() {
       Promise.all(requests)
         .then((results) => {
           const [userRes, profileRes, projectsRes] = results
-          
-          const u = userRes.data?.user || userRes.user
-          const p = profileRes.data?.profile || profileRes.data
+          const u = userRes.data
+          const p = profileRes.data
           
           if (!u) {
             console.warn("User data missing in response:", userRes)
-            setError("User 1found")
+            setError("User profile not found")
             return
           }
 
@@ -84,7 +83,7 @@ export default function ProfileView() {
             setMyProjects(projectsRes.data || [])
           }
         })
-        .catch(err => setError(err.message || "Failed to load profile"))
+        .catch(err => setError(err.message || "Failed to load profile details"))
         .finally(() => setLoading(false))
     }
   }, [id, isClientView])

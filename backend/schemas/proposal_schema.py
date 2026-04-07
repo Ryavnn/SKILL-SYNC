@@ -7,7 +7,7 @@ class ProposalResponseSchema(SQLAlchemyAutoSchema):
         model = Proposal
         load_instance = True
         include_fk = True
-        exclude = ('project_id', 'freelancer_id', 'created_at', 'updated_at', 'bid_amount', 'estimated_duration')
+        exclude = ('project_id', 'freelancer_id', 'created_at', 'updated_at', 'bid_amount', 'estimated_duration', 'cover_letter')
 
     # Camel case aliases
     projectId = fields.UUID(attribute="project_id")
@@ -18,6 +18,7 @@ class ProposalResponseSchema(SQLAlchemyAutoSchema):
     estimatedDuration = fields.String(attribute="estimated_duration")
     createdAt = fields.DateTime(attribute="created_at")
     updatedAt = fields.DateTime(attribute="updated_at")
+    coverLetter = fields.String(attribute="cover_letter")
 
     def get_freelancer_name(self, obj):
         return obj.freelancer.name if obj.freelancer else None
